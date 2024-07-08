@@ -1,9 +1,11 @@
 "use client";
-import PodcastCard from '@/components/PodcastCard'
-import { podcastData } from '@/constants';
+import PodcastCard from "@/components/PodcastCard";
+import { podcastData } from "@/constants";
+import { api } from "@/convex/_generated/api";
 // import { useQuery } from "convex/react";
 // import { api } from "@/convex/_generated/api";
 // import LoaderSpinner from '@/components/LoaderSpinner';
+import { useQuery } from "convex/react";
 
 const Home = () => {
   // const trendingPodcasts = useQuery(api.podcasts.getTrendingPodcasts);
@@ -12,7 +14,7 @@ const Home = () => {
 
   return (
     <div className="mt-9 flex flex-col gap-9 md:overflow-hidden">
-      <section className='flex flex-col gap-5'>
+      <section className="flex flex-col gap-5">
         <h1 className="text-20 font-bold text-white-1">Trending Podcasts</h1>
 
         <div className="podcast_grid">
@@ -28,7 +30,7 @@ const Home = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
